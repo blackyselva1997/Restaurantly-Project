@@ -13,7 +13,8 @@
 
 .top-bar-sec {
 	position: relative;
-	z-index: 6
+	z-index: 6;
+	padding-top: 10px;
 }
 
 .top-bar-con {
@@ -25,6 +26,7 @@
 	display: flex;
 	font-size: 15px;
 	color: #fff;
+	padding-top: 5px;
 }
 
 .top-bar-col1 {
@@ -71,7 +73,9 @@
 
 .nav-row {
 	display: flex;
-	padding-top: 30px;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0 12px 0;
 }
 
 .nav-col1 {
@@ -83,6 +87,15 @@
 	width: 70%;
 	display: flex;
 	justify-content: center;
+}
+
+.nav-col2 nav {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
 }
 
 .nav-col3 {
@@ -764,16 +777,18 @@
 .reserv-6box {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	padding-top: 40px;
 }
 
 .reserv-input {
 	width: 33.3%;
-	padding-bottom: 20px;
+	padding: 10px;
 }
 
 .reserv-input input {
-	width: 95%;
+	width: 100%;
 	padding: 10px;
 	color: #fff;
 	background-color: #000;
@@ -801,7 +816,7 @@
 }
 
 .reserv-mas textarea {
-	width: 98%;
+	width: 100%;
 	padding: 20px;
 	color: #fff;
 	background-color: #000;
@@ -883,7 +898,6 @@
 	justify-content: center;
 	font-style: italic;
 	padding: 20px 20px 60px 20px;
-	position: relative;
 }
 
 .test-para {
@@ -892,7 +906,7 @@
 
 .test-card1 {
 	position: absolute;
-	top: 240px;
+	bottom: 33px;
 	left: 30px;
 }
 
@@ -908,6 +922,7 @@
 }
 
 .test-box {
+	position: relative;
 	width: 100%;
 	padding: 60px 0 100px;
 }
@@ -1016,7 +1031,6 @@
 
 .chef-col1 {
 	padding-top: 10px;
-	position: relative;
 }
 
 .chef-col2 {
@@ -1036,8 +1050,7 @@
 
 .chef-intro {
 	position: absolute;
-	top: 0;
-	padding-top: 300px;
+	bottom: 2px;
 	text-align: center;
 	visibility: hidden;
 	opacity: 0;
@@ -1445,6 +1458,11 @@
 	.home-row {
 		display: flex;
 		flex-wrap: wrap;
+		padding-top: 50px;
+	}
+
+	.home-button {
+		text-align: center;
 	}
 
 	.home-card {
@@ -1453,6 +1471,7 @@
 
 	.home-card1 {
 		width: 100%;
+		padding-top: 30px;
 	}
 
 	.home-hed h1 {
@@ -1463,6 +1482,10 @@
 	.about-row {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	.about-con {
+		width: 100%;
 	}
 
 	.about-col {
@@ -1606,7 +1629,7 @@
 	}
 
 	.test-card1 {
-		top: 340px;
+		bottom: 35px;
 	}
 
 	.test-box {
@@ -1651,7 +1674,8 @@
 	}
 
 	.chef-intro {
-		padding-top: 200px;
+		/* padding-top: 200px; */
+		bottom: 2px;
 	}
 
 	/*contact section*/
@@ -1688,6 +1712,10 @@
 
 	.footer-sec {
 		font-size: 20px;
+	}
+
+	.footer-con {
+		padding: 20px 0;
 	}
 
 	.footer-top {
@@ -1787,6 +1815,10 @@
 	.about-row {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	.about-con {
+		width: 100%;
 	}
 
 	.about-col {
@@ -1978,7 +2010,7 @@
 	}
 
 	.test-card1 {
-		top: 200px;
+		bottom: 14px;
 	}
 
 	.test-box {
@@ -2033,8 +2065,8 @@
 	}
 
 	.chef-intro {
-		padding-top: 400px;
-		bottom: 0;
+		/* padding-top: 400px; */
+		bottom: 2px;
 	}
 
 	/*contact section*/
@@ -2361,7 +2393,9 @@
 	.reserv-6box {
 		display: flex;
 		flex-wrap: wrap;
-		padding-bottom: 10px;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
 	}
 
 	.reserv-input {
@@ -2385,7 +2419,7 @@
 	}
 
 	.test-card1 {
-		top: 250px;
+		bottom: 33px;
 	}
 
 	/*gallery section*/
@@ -2436,7 +2470,8 @@
 	}
 
 	.chef-intro {
-		padding-top: 300px;
+		/* padding-top: 300px; */
+		bottom: 2px;
 	}
 
 	/*contact section*/
