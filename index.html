@@ -23,13 +23,14 @@
 								<i class="fa fa-mobile"></i>
 							</div>
 							<p>+1 5589 55488 55</p>
-						</div>
-						<div class="top-bar-col2">
-							<div class="top-bar-icon">
-								<i class="fa fa-clock"></i>
+							<div class="top-bar-col2">
+								<div class="top-bar-icon">
+									<i class="fa fa-clock"></i>
+								</div>
+								<p>Mon-Sat: 11AM - 23PM</p>
 							</div>
-							<p>Mon-Sat: 11AM - 23PM</p>
 						</div>
+						
 						<div class="top-bar-col3">
 							<p><span class="top-bar-en">En</span> / De</p>
 						</div>
@@ -40,44 +41,33 @@
 			<section class="nav-sec">
 				<div class="nav-con">
 					<div class="nav-row">
-						<div class="nav-col1">
-							<h2>RESTAURANTLY</h2>
-						</div>
 						<div class="nav-col2">
-							<nav>
-								<a href="#">Home</a>
-								<a href="#about-sec">About</a>
-								<a href="#menu-sec">Menu</a>
-								<a href="#specials-sec">Specials</a>
-								<a href="#event-sec">Events</a>
-								<a href="#chef-sec">Chefs</a>
-								<a href="#gal-sec">Gallery</a>
-
-
-								<a class="drop-hover" href="#">Drop Down<i class="fa fa-chevron-down"></i></a>
-
-
-								<ul class="drop-down">
-									<li><a href="#">Drop Down 1</a></li>
-									<li><a href="#">Deep Drop Down<i class="fa fa-chevron-right"></i></a></li>
-
-									<!--<div class="deep-drop-hover">
-										<a href="#">Deep Drop Down 1</a>
-										<a href="#">Deep Drop Down 2</a>
-										<a href="#">Deep Drop Down 3</a>
-										<a href="#">Deep Drop Down 4</a>
-										<a href="#">Deep Drop Down 5</a>
-									</div>-->
-									<li><a href="#">Drop Down 2</a></li>
-									<li><a href="#">Drop Down 3</a></li>
-									<li><a href="#">Drop Down 4</a></li>
-								</ul>
-
-								<a href="#contact-sec">Contact</a>
-							</nav>
-						</div>
-						<div class="nav-col3">
-							<button>BOOK A TABLE</button>
+							<header>
+								<nav class="navbar">
+									<a class="nav-branding" href="#">RESTAURANTLY</a>
+									<ul class="nav-menu">
+										<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+										<li class="nav-item"><a class="nav-link" href="#about-sec">About</a></li>
+										<li class="nav-item"><a class="nav-link" href="#menu-sec">Menu</a></li>
+										<li class="nav-item"><a class="nav-link" href="#specials-sec">Specials</a></li>
+										<li class="nav-item"><a class="nav-link" href="#event-sec">Events</a></li>
+										<li class="nav-item"><a class="nav-link" href="#chef-sec">Chefs</a></li>
+										<li class="nav-item"><a class="nav-link" href="#gal-sec">Gallery</a></li>
+										<li class="nav-item"><a class="drop-hover nav-link" href="#">Down</a></li>
+										<li class="nav-item"><a class="nav-link" href="#contact-sec">Contact</a></li>
+										<li class="nav-item">
+											<div class="nav-col3 nav-link">
+												<button>BOOK A TABLE</button>
+											</div>
+										</li>
+									</ul>
+									<div class="hamburger">
+										<span class="bar"></span>
+										<span class="bar"></span>
+										<span class="bar"></span>
+									</div>
+								</nav>
+							</header>
 						</div>
 					</div>
 				</div>
@@ -881,29 +871,29 @@
 					<h4>Our Newsletter</h4>
 					<p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
 					<div class="sub-con">
-					<div class="sub-row">
-						<div class="sub-col1 hidden">
-						  <div class="footer-input">
-							<input type="email" name="email" required>
-						  </div>
+						<div class="sub-row">
+							<div class="sub-col1 hidden">
+								<div class="footer-input">
+									<input type="email" name="email" required>
+								</div>
+							</div>
+							<div class="sub-col2">
+								<div class="footer-button">
+									<button class="footer-button1">subscribe</button>
+								</div>
+							</div>
 						</div>
-						<div class="sub-col2">
-						  <div class="footer-button">
-							<button class="footer-button1">subscribe</button>
-						  </div>
-						</div>
-					</div>
-					</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer-down">
-				<p><small>© Copyright <b>Restaurantly.</b> All Rights Reserved</small></p>
-				<p><small>Designed by <span>Selva</span></small></p>
-			</div>
-			<div class="back-to-top">
-				<a href="#home-sec"><i class="fa-solid fa-arrow-up"></i></a>
-			</div>
+		</div>
+		<div class="footer-down">
+			<p><small>© Copyright <b>Restaurantly.</b> All Rights Reserved</small></p>
+			<p><small>Designed by <span>Selva</span></small></p>
+		</div>
+		<div class="back-to-top">
+			<a href="#home-sec"><i class="fa-solid fa-arrow-up"></i></a>
+		</div>
 		</div>
 	</section>
 
@@ -913,6 +903,20 @@
 	<script src="owlcarousel/owl.carousel.min.js"></script>
 	<script src="main.js"></script>
 	<script src="https://kit.fontawesome.com/3515bfed87.js" crossorigin="anonymous"></script>
+	<script>
+		const hamburger = document.querySelector(".hamburger");
+		const navMenu = document.querySelector(".nav-menu");
+
+		hamburger.addEventListener("click", () => {
+			hamburger.classList.toggle("active");
+			navMenu.classList.toggle("active");
+		})
+
+		document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+			hamburger.classList.remove("active");
+			navMenu.classList.remove("active");
+		}))
+	</script>
 </body>
 
 </html>
